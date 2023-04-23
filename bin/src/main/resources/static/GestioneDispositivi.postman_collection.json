@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "ccb1c6f4-e04f-4b42-867f-d8494d07bab7",
+		"name": "GestioneDispositivi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25926925"
+	},
+	"item": [
+		{
+			"name": "Inserisci utente ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"vincenzo\",\n    \"username\":\"vinsPic\",\n    \"email\":\"vins.pic@example.com\",\n    \"password\":\"pass222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"vincenzo\",\n    \"username\":\"vinsPic\",\n    \"email\":\"vins.pic@example.com\",\n    \"password\":\"pass222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dipendenti",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dipendenti",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dipendenti"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dispositivi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dispositivi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dispositivi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get DIspositivi per id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dispositivi/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dispositivi",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dipendenti per id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dipendenti/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dipendenti",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostDipendenti",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ2aW5zLnBpY0BleGFtcGxlLmNvbSIsImlhdCI6MTY4MjA5MjMwNSwiZXhwIjoxNjgyNjk3MTA1fQ.ucAtbjBxkiE1zgBpdGZNqQy7KJDAu3ijuEt7rEhSQiYcNdp--RT4QvJZyivV99_o\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 34,\n    \"username\": \"Provapost\",\n    \"nome\": \"Prova\",\n    \"cognome\": \"Post\",\n    \"email\": \"Gia.Longo@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dipendenti",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dipendenti"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
